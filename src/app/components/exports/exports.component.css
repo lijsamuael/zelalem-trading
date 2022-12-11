@@ -1,0 +1,63 @@
+.float-layout {
+  padding: 5px 5px;
+  float: left;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.card-container {
+  overflow: hidden;
+}
+
+.card {
+  background-color: rgba(226, 227, 228, 0.185);
+  color: black;
+  min-height: 100%; /*replace this it in width: 100%*/
+  width: 50%;
+  float: right;
+}
+
+.card-title {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.card-desc {
+  padding: 10px;
+  text-align: left;
+  font-size: 18px;
+}
+
+/*add this it*/
+.card-image {
+  display: flex;
+}
+/*-------------*/
+
+div.card-image img {
+  width: 50%;
+  height: auto;
+}
+
+/* Phone Devices Query */
+@media only screen and (max-width: 62.5em) {
+  div.card-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /*add this it*/
+  .card-image {
+     flex-direction: column;
+  }
+  /*----------------------*/
+
+  .card {
+    width: 100%;
+    margin-top: -4px;
+  }
+}
