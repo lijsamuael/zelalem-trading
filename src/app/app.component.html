@@ -27,10 +27,10 @@
                   <a class="nav-link text-center fw-bold " routerLink="/exports">EXPORTS</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-center fw-bold" routerLink="/contacts">CONTACTS</a>
+                  <a class="nav-link text-center fw-bold" routerLink="/contacts">CONTACT US</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-center fw-bold" routerLink="/about">ABOUT</a>
+                  <a class="nav-link text-center fw-bold" routerLink="/about">ABOUT US</a>
                 </li>
             </ul>
          </div>      
@@ -84,8 +84,11 @@
       </ul>
       <ul class="box input-box">
         <li class="link_name">Subscribe</li>
-        <li><input type="text" placeholder="Enter your email"></li>
-        <li><input type="button" value="Subscribe"></li>
+        <form action="" [formGroup]="subscribers">
+          <li><input type="email" placeholder="Enter your email" formArrayName="email" formControlName="email"></li>
+          <p class="text-success">{{ subscribed_message }}</p>
+          <li><input type="button" value="Subscribe" (click)="subscribe(subscribers.value)" [disabled]="subscribers.invalid"></li>
+        </form>
       </ul>
     </div>
   </div>

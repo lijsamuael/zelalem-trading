@@ -268,8 +268,7 @@ html, body{
 }
 .background {
   color: hsl(324, 70%, 45%);
-  animation: wheelHueColor 10s infinite;
-  background-color: currentColor;
+  background-color: rgba(255, 136, 0, 0.945);
 }
 @supports (background-blend-mode: overlay) {
   .background {
@@ -277,18 +276,7 @@ html, body{
     background-blend-mode: overlay;
   }
 }
-@keyframes wheelHueColor {
-  from, to { color: hsl(324, 70%, 45%); }
-  10%      { color: hsl(360, 65%, 45%); }
-  20%      { color: rgb(207, 23, 146); }
-  30%      { color: rgb(255, 200, 19); }
-  40%      { color: hsl(4, 100%, 50%); }
-  50%      { color: hsl(19, 77%, 26%); }
-  60%      { color: hsl(221, 77%, 59%); }
-  70%      { color: hsl(216, 77%, 38%); }
-  80%      { color: hsl(252, 65%, 50%); }
-  90%      { color: hsl(214, 60%, 40%); }
-}
+
 
 
 /* misc */
@@ -302,3 +290,4 @@ html, body{
   background: rgba(0,0,0,.75);
   padding: 1em;
 }
+

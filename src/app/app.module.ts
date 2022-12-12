@@ -17,6 +17,8 @@ import { ImportsComponent } from './components/imports/imports.component';
 import { ExportsComponent } from './components/exports/exports.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { AboutComponent } from './components/about/about.component';
+import { IdentityComponent } from './components/identity/identity.component';
+import { OrderService } from './shared/services/order.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { AboutComponent } from './components/about/about.component';
     ImportsComponent,
     ExportsComponent,
     ContactsComponent,
-    AboutComponent
+    AboutComponent,
+    IdentityComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,7 @@ import { AboutComponent } from './components/about/about.component';
     AngularFireDatabaseModule,
 
   ],
-  providers: [],
+  providers: [OrderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

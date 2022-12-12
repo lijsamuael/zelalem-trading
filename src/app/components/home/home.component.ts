@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IdentityComponent } from '../identity/identity.component';
 
 @Component({
   selector: 'app-home',

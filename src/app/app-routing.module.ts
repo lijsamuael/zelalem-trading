@@ -8,7 +8,7 @@ import { ImportsComponent } from './components/imports/imports.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  {path: 'home', component: HomeComponent},
+  {path: 'home', component: HomeComponent, },
   {path: 'about', component: AboutComponent},
   {path: 'contacts', component: ContactsComponent},
   {path: 'exports', component: ExportsComponent},

@@ -1,19 +1,42 @@
-<section class="container mt-5 pt-5" >
-    <h1 class="fw-bold text-center mt-5" style="color:#0476d0 ;">Contact Us</h1>
-        <p class="text-center fs-3 mt-5" style="color: #0476d0;">You can order us here or contact us using an email.</p>
-        <div class="form-floating mt-5">
-            <input type="text" class="form-control" id="floatingName" placeholder="name" style="height: 80px">
-            <label for="floatingName" class=" fs-5">Name</label>
+
+
+<div class="container-fluid row mx-auto mt-5 pt-5">   
+  <div class="card-container">
+    <div class="float-layout ">
+      <div class="card-image " >
+
+          <div class="card d-flex align-items-center justify-content-center">
+          <div class="card-title " style="color:#2465a9"><span style="color:#9a1a33" class="border-bottom border-5 border-primary ">Get</span> In Touch With Us!</div>
+          <div class="card-desc fs-4">
+            <p class="text-center fs-3 mt-2"><samp>You can order us here or contact us using an email.</samp></p>
+            <form action="" [formGroup]="contactForm">
+              <div class="form-floating mt-5">
+                <input type="text" class="form-control" id="floatingName" placeholder="name" style="height: 80px" formControlName="name">
+                <label for="floatingName" class=" fs-5">Name</label>
+              </div>
+            <div class="form-floating mt-5">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" style="height: 80px" formControlName="email">
+                <label for="floatingInput" class=" fs-5">Email</label>
+              </div>
+              <div class="form-floating mt-5">
+                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" style="height: 80px" formControlName="phone">
+                <label for="floatingInput" class=" fs-5">Phone</label>
+              </div>
+            <div class="form-floating mt-5">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 200px" formControlName="message"></textarea>
+                <label for="floatingTextarea2" class=" fs-5">Message</label>
+            </div>
+            <p class="text-success"><samp>{{submitMessage}}</samp></p>
+            <div class="mt-5 mb-5" style="width:100%;">
+              <button type="submit" class="btn btn-danger pt-3 pb-3" (click)="submit(contactForm.value)" [disabled]="contactForm.invalid">Send a Message</button>
+            </div>
+            </form>
           </div>
-        <div class="form-floating mt-5">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" style="height: 80px">
-            <label for="floatingInput" class=" fs-5">Email</label>
-          </div>
-        <div class="form-floating mt-5">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 200px"></textarea>
-            <label for="floatingTextarea2" class=" fs-5">Message</label>
-          </div>
-        <div class="mt-5 mb-5" style="width:100%;">
-          <button type="submit" class="btn btn-outline-danger pt-3 pb-3">Send a Message</button>
         </div>
-</section>
+        <div class="location container-fluid mt-5">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.78437123052!2d38.77314451537672!3d8.991979193546554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b845420b57cc3%3A0xa1bf964f2ce6972f!2sWollo%20Sefer%2C%20Addis%20Ababa!5e0!3m2!1sen!2set!4v1670780930733!5m2!1sen!2set" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
