@@ -1,5 +1,4 @@
 .float-layout {
-    padding: 5px 5px;
     float: left;
     width: 100%;
     height: auto;
@@ -23,7 +22,6 @@
     font-size: 30px;
     text-align: center;
     font-weight: bold;
-    padding-top: 20px;
   }
   
   .card-desc {
